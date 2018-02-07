@@ -6,6 +6,7 @@ FactoryBot.define do
   factory :address do
     sequence(:description) { |n| "description #{n}" }
     sequence(:street) { |n| "street #{n}" }
+    sequence(:state) { |n| "state #{n}" }
     sequence(:city) { |n| "city #{n}" }
     sequence(:zip_code) { |n| n }
     student
