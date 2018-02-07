@@ -7,7 +7,7 @@ describe 'As a user' do
 
       visit edit_student_path(student)
       fill_in 'Name', with: 'Not My Lover'
-      click_on 'Edit Student'
+      click_on 'Update Student'
 
       expect(page).to have_content('Not My Lover')
       expect(page).to have_content('Not My Lover updated!')
