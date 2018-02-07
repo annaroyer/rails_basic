@@ -22,8 +22,3 @@ describe 'As a user' do
     end
   end
 end
-
-# Student has Many Addresses
-# As a user
-# When I visit /students/:id
-# I see all addresses associated with that student (e.g. if that student has two addresses, I see both)
