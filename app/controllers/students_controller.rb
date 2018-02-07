@@ -1,5 +1,5 @@
 class StudentsController < ApplicationController
-  before_action :set_student, only: [:show, :edit, :delete, :update]
+  before_action :set_student, only: [:show, :edit, :destroy, :update]
 
   def show
   end
@@ -28,6 +28,11 @@ class StudentsController < ApplicationController
   def update
     @student.update(student_params)
     redirect_to student_path(@student)
+  end
+
+  def destroy
+    @student.destroy
+    redirect_to students_path
   end
 
   private
