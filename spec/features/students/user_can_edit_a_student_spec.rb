@@ -10,7 +10,6 @@ describe 'As a user' do
       click_on 'Update Student'
 
       expect(page).to have_content('Not My Lover')
-      expect(page).to have_content('Not My Lover updated!')
       expect(current_path).to eq(student_path(1))
     end
 
