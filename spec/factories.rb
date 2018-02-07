@@ -11,4 +11,12 @@ FactoryBot.define do
     student
   end
 
+  factory :course do
+    sequence(:name) { |n| "Course #{n}" }
+  end
+
+  factory :student_course do
+    student
+    course
+  end
 end
