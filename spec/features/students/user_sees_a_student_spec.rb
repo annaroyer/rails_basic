@@ -12,9 +12,3 @@ describe 'As a user' do
     end
   end
 end
-
-
-# Navigation
-# As a user
-# When I visit any page
-# I see links to see a list of all students, or create a new student
