@@ -5,6 +5,10 @@ class StudentsController < ApplicationController
 
   end
 
+  def index
+    @students = Student.all
+  end
+
   private
   def set_student
     @student = Student.find(params[:id])
