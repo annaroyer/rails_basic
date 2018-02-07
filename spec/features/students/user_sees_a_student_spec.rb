@@ -20,7 +20,7 @@ describe 'As a user' do
     end
 
     scenario "I can see that student's courses" do
-      student = Student.create!
+      student = Student.create!(name: 'Billy Jean')
       student_courses = create_list(:student_course, 3, student: student)
 
       visit students_path
