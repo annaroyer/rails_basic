@@ -12,6 +12,10 @@ describe 'As a user' do
       expect(page).to have_content(student.name)
       addresses.each do |address|
         expect(page).to have_content(address.description)
+        expect(page).to have_content(address.street)
+        expect(page).to have_content(address.city)
+        expect(page).to have_content(address.state)
+        expect(page).to have_content(address.zip_code)
       end
     end
   end
