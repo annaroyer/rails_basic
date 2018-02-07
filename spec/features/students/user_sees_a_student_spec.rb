@@ -18,5 +18,27 @@ describe 'As a user' do
         expect(page).to have_content(address.zip_code)
       end
     end
+
+    scenario "I can see that student's courses" do
+      student = Student.create!
+      courses = create_list(:course, 3, student: student)
+
+      visit students_path
+      click_on student.name
+
+      courses.each do |course|
+        expect(page).to have_content(course.name)
+      end
+    end
   end
 end
+
+# Student has Many Courses
+# As a user
+# When I visit /students/:id
+# I can see a list of courses that student is taking
+# Courses Have Many Students
+# As a user
+# When I visit /courses/:id
+# I see the name of that course
+# And a list of students enrolled in that course
