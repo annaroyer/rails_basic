@@ -21,13 +21,13 @@ describe 'As a user' do
 
     scenario "I can see that student's courses" do
       student = Student.create!
-      courses = create_list(:course, 3, student: student)
+      student_courses = create_list(:student_course, 3, student: student)
 
       visit students_path
       click_on student.name
 
-      courses.each do |course|
-        expect(page).to have_content(course.name)
+      student_courses.each do |student_course|
+        expect(page).to have_content(student_course.course.name)
       end
     end
   end
